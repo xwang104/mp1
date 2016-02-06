@@ -1,0 +1,27 @@
+div#characters {
+  text-align: center;
+}
+
+div#characters div {
+  border: 2px solid red;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  width: 20%;
+  margin: 2%;
+  padding: 2%;
+  height: 200px;
+}
+
+div#characters img {
+  display: block;
+  position: absolute;
+  margin-left: 20%;
+}
+
+div#characters p {
+  margin-top: 60%;
+  text-indent: 0;
+  font-size: 0.8em;
+}

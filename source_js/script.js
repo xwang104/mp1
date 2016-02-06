@@ -15,6 +15,8 @@ function highlightThis(event) {
     this.style.backgroundColor=backgroundColor;
 }
 
+//----------------carousel animation------------------
+
 var current = 1,
     slider_entries = $('#inner'),
     items = slider_entries.find('li'),
@@ -42,19 +44,12 @@ $(document).ready(function() {
     return;
 });
 
-$(document).scroll(function() {
-    if($(window).scrollTop() > 80) {
-        navResize();
-    }
-});
-
-
 function slide(dir) {
     //alert("in slide");
     if (dir != -1) {
         dir = 1;
     }
-    slider_entries.stop().animate({"left": "+=" + (-800 * dir)}, 250, function() {
+    slider_entries.animate({"left": "+=" + (-800 * dir)}, 250, function() {
         //alert("slide" + current + ", "  + dir + ", " + len);
         current += dir;
         var cycle = !!(current === 0 || current > len);
@@ -65,11 +60,35 @@ function slide(dir) {
     });
 }   
 
-function navResize() {
+//----------------header animation------------------
+
+$(document).scroll(function() {
+    if($(window).scrollTop() > 80) {
+        scrollDown();
+    }
+    if($(window).scrollTop() > 120) {
+        $("#navigation").css('height', '3em');
+    }
+    if($(window).scrollTop() <= 80) {
+        scrollUp();
+    }
+});
+
+function scrollDown() {
   $("#logo").hide();
   $("#name").hide();
   $("#navigation").css({'height': '3.8em',
                         'margin-top': '0',
                         'position': 'fixed'});
 }
- 
+
+function scrollUp() {
+  $("#logo").show();
+  $("#name").css('display', 'inline');
+  $("#navigation").css({'height': '3em',
+                        'margin-top': '5.8em',
+                        'position': 'absolute'});
+}
+
+
+

@@ -3,3 +3,16 @@ div#intro img {
   margin-left: 2.5em;
   width: 100px;
 }
+
+div#intro p {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+div#intro {
+  background-color: lighten($orange, 50);
+  border: 2px solid;
+  border-color: lightBlue lighten($orange, 50);
+}
