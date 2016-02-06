@@ -1,0 +1,46 @@
+#carousel {
+  margin: 0 auto;
+  width:800px;
+  height: 455px;
+  position:relative; 
+  overflow: hidden;
+}
+
+#carousel li img {
+  width: 800px;
+  height:auto;
+  position:relative;
+  float: left;
+}
+
+#inner {
+  list-style: none;
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrow {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  border-top: 3px solid blue;
+  border-right: 2px solid blue;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 2em;
+  transform: rotate(225deg);
+}
+
+.arrow-right {
+  right: 2em;
+  transform: rotate(45deg);
+}
+
+
