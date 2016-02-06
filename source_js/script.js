@@ -91,4 +91,36 @@ function scrollUp() {
 }
 
 
+//-----------modal-------------
+
+$(document).ready(function() {
+    //alert("ready");
+    var activeWindow;
+    $(".chadiv").click(function() {
+        var id = $(this).attr('id');
+    activeWindow = $("#" + id + "-detail")
+            .css('opacity', '0')
+            .css('top', '50%')
+            .css('left', '50%')
+            .fadeTo(500, 1);
+    $("#modal")
+        .append('<div id="blind" />')
+        .find("#blind")
+        .css('opacity', '0')
+        .fadeTo(500, 0.6)
+        .click(function() {
+            closeModal();
+        });
+    });
+
+    $("a.close").click(function(e) {
+        e.preventDefault();
+        closeModal();
+    });
+
+    function closeModal() {
+        activeWindow.fadeOut(250, function(){ $(this).css('top', '-1000px').css('left','-1000px');});
+        $("#blind").fadeOut(250, function() { $(this).remove();});
+    }
+});
 

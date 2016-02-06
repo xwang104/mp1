@@ -5,6 +5,7 @@
   <title>Chibi Maruko Chan</title>
   <meta name="description" content="A website for our childhood friend Chibi Maruko Chan.">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
@@ -61,32 +62,53 @@
   </div>
 
 <!- characters-->
-  <div id="characters" style="border: 2px solid red;">
-    <div>
+  <div id="characters" style="border: 0px solid red;">
+    <div id="cha1" class="chadiv">
        <img src="./media/c_1.png", alt="Momoko Maruko Sakura">
        <p>Momoko "Maruko" Sakura (さくらももこ)</p>
     </div>
-    <div>
+    <div id="cha2" class="chadiv">
        <img src="./media/c_2.png", alt="Sakiko Sakura">
        <p>Sakiko Sakura (さくらさきこ)</p>
     </div>
-    <div>
+    <div id="cha3" class="chadiv">
        <img src="./media/c_3.png", alt="Hiroshi Sakura">
        <p>Hiroshi Sakura (さくらひろし)</p>
     </div>
-    <div>
+    <div id="cha4" class="chadiv">
        <img src="./media/c_4.png", alt="Sumire Sakura">
        <p>Sumire Sakura (さくらすみれ)</p>
     </div>
-    <div>
+    <div id="cha5" class="chadiv">
        <img src="./media/c_5.png", alt="Tomozou Sakura">
        <p>Tomozou Sakura (さくら友蔵)</p>
     </div>
-    <div>
+    <div id="cha6" class="chadiv">
        <img src="./media/c_6.png", alt="Kotake Sakura">
        <p>Kotake Sakura (さくらこたけ)</p>
     </div>
   </div>
+
+  <div id="modal">
+    <div id="cha1-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_1_1.png", alt="Momoko Maruko Sakura">
+        <h2>Momoko "Maruko" Sakura (さくらももこ)</h2>
+        <p>Maruko is a nine-year-old third-grade student raised in a relatively poor family of six. She is lazy, disorganized and usually late for school. Maruko, like many kids, tries to avoid homework and chores, and she takes advantage of her doting grandfather and squabbles with her sister. Nevertheless, she is a well-meaning child who tries to do good. She often uses adult-like language to express her childlike feelings. She loves reading manga and is a good artist, and her stated goal is to become a manga artist when she grows up.</p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
+    <div id="cha2-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_2_1.png", alt="Sakiko Sakura">
+        <h2>Sakiko Sakura (さくらさきこ)</h2>
+        <p>Maruko's older sister. She is clever and diligent, the exact opposite of the lazy Maruko. She and Maruko fight often but they get along fine. Her birthday is March 21, 1962, making her 12 in the series. </p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
+
+  </div>
+
 
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>

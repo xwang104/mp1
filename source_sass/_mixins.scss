@@ -1,0 +1,9 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+div#characters div{ @include border-radius($default-border-radius); }
+.window{ @include border-radius($default-border-radius); }
