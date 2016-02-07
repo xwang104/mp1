@@ -12,30 +12,32 @@
 <!-- header-->
   <header>
     <nav id="navigation">
+      <img src="./media/flower.png">
       <ul>
-        <li class="changeBackground"><a href="#">Introduction</a></li>
-        <li class="changeBackground"><a href="#">Characters</a></li>
-        <li class="changeBackground"><a href="#">Wallpaper</a></li>
-        <li class="changeBackground"><a href="#">Resource</a><li>
+        <li class="changeBackground"><a href="part1">Introduction</a></li>
+        <li class="changeBackground"><a href="part2">Characters</a></li>
+        <li class="changeBackground"><a href="part3">Media</a></li>
+        <li class="changeBackground"><a href="part4">Resource</a><li>
       </ul>
     </nav>
     <a id="logo" href="index.html"><img src="./media/logo.png" alt="Chibi Maruko Chan"></a>
     <hgroup>
       <h1 id="name">Chibi Maruko Chan</h1>
     </hgroup>
+    <div class="clearFloat"></div>
   </header>
-  <div id="invisible-header" style="border:2px solid blue;">
+  <!--div id="invisible-header" style="border:2px solid blue;">
     <a href="index.html"><img src="./media/logo.png" alt="Chibi Maruko Chan"></a>
     <hgroup>
       <h1>Chibi Maruko Chan</h1>
     </hgroup>
     <div class="clearFloat"></div>
-  </div>
+  </div-->
 
 <!--header-->
 
-<!- carousel -->
-  <div style="border: 0px solid red;">
+<!-- carousel -->
+  <div id="carousel-container">
     <div id="carousel">
       <ul id="inner" >
         <li>
@@ -52,17 +54,18 @@
     <div id="left" class="arrow arrow-left"></div>
     <div id="right" class="arrow arrow-right"></div>
   </div>
-<!- carousel -->
+<!--carousel -->
 
   <div id="intro">
     
     <!--img src="./media/author.jpg", alt="Sakura, Momoko"-->
-    <p>Chibi Maruko-chan (Japanese: ちびまる子ちゃん) is a Shōjo manga series written and illustrated by Momoko Sakura. The series depicts the simple, everyday life of Momoko Sakura in the times of when she was a little girl where everyone call her Maruko, and her family in suburban Japan in the year 1974. The series is set in the former city of Shimizu, now part of Shizuoka City, birthplace of its author.</p>
-    <div class="clearFloat"></div>    
+    <p>Chibi Maruko-chan (Japanese: ちびまる子ちゃん) is a Shōjo manga series written and illustrated by Momoko Sakura. The series depicts the simple, everyday life of Momoko Sakura in the times of when she was a little girl where everyone call her Maruko, and her family in suburban Japan in the year 1974. The series is set in the former city of Shimizu, now part of Shizuoka City, birthplace of its author.</p>  
   </div>
 
-<!- characters-->
-  <div id="characters" style="border: 0px solid red;">
+  <div class="spacer"></div>
+
+<!-- characters-->
+  <div id="characters" class="transparent" style="border: 0px solid red;">
     <div id="cha1" class="chadiv">
        <img src="./media/c_1.png", alt="Momoko Maruko Sakura">
        <p>Momoko "Maruko" Sakura (さくらももこ)</p>
@@ -106,11 +109,83 @@
         <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
       </div>
     </div>
+    <div id="cha3-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_3_1.png", alt="Hiroshi Sakura">
+        <h2>Hiroshi Sakura (さくらひろし)</h2>
+        <p>Maruko's father. He was introduced to Maruko's mother by her friend. He drinks every now and then but is a kind loving dad. His birthday is June 20, 1934, making him 40 years old during the series. </p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
+    <div id="cha4-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_4_1.png", alt="Sumire Sakura">
+        <h2>Sumire Sakura (さくらすみれ)</h2>
+        <p>Maruko's mother. She tends to scold Maruko a lot. She is a strict mother but a very pleasant one. She's extremely focused on household finances, and shops mainly at department stores during bargain sales. Her birthdate is May 25, 1934. It is revealed in one episode that her maiden name is Kobayashi.</p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
+    <div id="cha5-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_5_1.png", alt="Tomozou Sakura">
+        <h2>Tomozou Sakura (さくら友蔵)</h2>
+        <p>Maruko's kind but absent-minded grandfather. Naive and easily tricked, he keeps a pet turtle and loves watching TV with Maruko. When feeling distressed or nostalgic, he spontaneously retreats to a surreal inner world for a few seconds to improvise a sad yet comical haiku about his state of mind. His birthday is October 3, 1898, making him 76 in the series. The author has said that she used her own grandfather as the model for Tomozou, but that his personality is the opposite of Tomozou's.</p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
+    <div id="cha6-detail" class="window">
+      <div class="contents">
+        <img src="./media/c_6_1.png", alt="Kotake Sakura">
+        <h2>Kotake Sakura (さくらこたけ)</h2>
+        <p>Maruko's grandmother. She's wise and knows what's good for the human body and wears a traditional Kimono. She was born on April 4, 1904. Her name of Kotake was never known in the series until it appeared in a 4-panel manga (Yonkoma) on July 1, 2007</p>        
+        <a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+      </div>
+    </div>
 
   </div>
+  <img id="background" src="./media/background.jpg", alt="The Sakura family">
+
+  <div id="other-characters">
+    
+    <p>Other characters include Honami Tamae (穂波 たまえ), Maruko's best friend. She's smart, kind, and gentle. She's always reprimanding Maruko's silly antics. Her nickname is Tama-chan. Kazuhiko Hanawa (花輪和彦), a really rich boy in Maruko's class who lives in a mansion. His mom is always away travelling and so he doesn't see her that often. He also has a butler, Mr. Hideji, who drives a limo and picks him up every day from school. Hanawa is mentioned to have a crush on Maruko. He was born on August 7, 1965. Sueo Maruo (丸尾末男), Noritaka "Hamaji" Hamazaki (浜崎憲孝), Tarō "Butaro" Tomita (富田太郎), and so on...</p>
+  
+  </div>
+
+<!-- characters-->
+<div class="spacer"></div>
+<!--video-->
+
+  <div class="container">
+    <video class="video" autoplay loop>
+      <source src="./media/Chibi Maruko opening Japanese HD.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+  </div>
+
+<!--multicolumn-->
+  <div id="media">
+    <p><i class="fa fa-book fa-5x"></i></br></br>The original Chibi Maruko-chan manga was serialized in the shōjo-oriented Ribon Magazine. 14 volumes were published from July 1987 to December 1996, with a 15th volume published in February 2003. The 16th volume of the manga was published on April 15, 2009.</p>
+    <p><i class="fa fa-television fa-5x"></i></br></br>Chibi Maruko-chan originally aired on Fuji Television. 142 episodes were broadcast, from January 1990 to September 1992. The series attained a TV viewer rating of 39.9%, the highest rating ever attained by an animated TV series in Japan at the time. </p>
+    <p><i class="fa fa-film fa-5x"></i></br></br>Chibi Maruko-chan (Toho, 1990), Chibi Maruko-chan: My Favorite Song (1992), Chibi Maruko-chan: Italia Kara Kita Shounen (2015). The third movie was released throughout Japan on Dec. 23. 2015, being produced in celebration of its 25th memorial year</p>
+  </div>
+
+<!--multicolumn-->
 
 
+<div class="spacer"></div>
+  <footer>
+    <div>
+      <i class="fa fa-facebook-official fa-3x"></i>
+      <i class="fa fa-twitter-square fa-3x"></i>
+      <i class="fa fa-linkedin-square fa-3x"></i>
+      <i class="fa fa-google-plus-square fa-3x"></i>
 
+    </div>
+    <div>
+      Copyright © Xiaoxiao Wang
+    </div>
+  
+  </footer>
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>

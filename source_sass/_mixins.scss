@@ -6,4 +6,7 @@
 }
 
 div#characters div{ @include border-radius($default-border-radius); }
-.window{ @include border-radius($default-border-radius); }
+.window, .contents{ @include border-radius($default-border-radius); }
+.video { @include border-radius($default-border-radius); }
+div#carousel, div#carousel img{ @include border-radius($default-border-radius); }
+

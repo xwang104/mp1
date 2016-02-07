@@ -1,6 +1,19 @@
+img#background {
+  width: 100%;
+  height: auto;
+  position:fixed;
+  top:3em;
+  z-index: -10000;
+}
+
 div#characters {
-  margin-top: 2em;
+  padding: 2em;
   text-align: center;
+}
+
+.transparent {
+  background: #7f7f7f;
+  background: rgba(200,200,200, 0.5);
 }
 
 .chadiv {

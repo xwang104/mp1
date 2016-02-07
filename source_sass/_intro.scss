@@ -1,17 +1,15 @@
-div#intro img {
-  float: left;
-  margin-left: 2.5em;
-  width: 100px;
-}
-
-div#intro p {
+div#intro p, div#other-characters p{
   width: 60%;
   margin: 0 auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 
-div#intro {
+div#other-characters p{
+  width: 70%;
+  margin: 0 auto;
+}
+
+div#intro, div#other-characters {
+  padding: 2em;
   background-color: lighten($orange, 50);
   border: 2px solid;
   border-color: lightBlue lighten($orange, 50);

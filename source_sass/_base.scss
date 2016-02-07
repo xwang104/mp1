@@ -1,6 +1,10 @@
 @import url('http://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans|Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
+div, header {
+  background-color: #ffffff;
+}
+
 h1 {
   font-family: $font-secondary;
   font-size: 2.2rem;
@@ -46,6 +50,11 @@ nav {
   position: absolute;
   margin-top: 5.8em;
   z-index: -1;
+  img {
+    height: 80%;
+    widht: auto;
+    margin-left: 5em;
+  }
   ul {
     float: right;
     margin-top: .8em;
@@ -93,3 +102,57 @@ div#invisible-header img {
   width: 100%;
   margin: 0 auto;
 }
+
+.spacer {
+  padding: 1.1em;
+}
+
+.video {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+#media {
+  background-color: lighten($orange, 50);
+  padding: 2em 3em 2em 3em;
+  border: 2px solid;
+  border-color: lightBlue lighten($orange, 50);
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+
+  -webkit-column-gap: 40px; 
+  -moz-column-gap: 40px; 
+  column-gap: 40px;
+
+  -webkit-column-rule: 2px solid lightblue; 
+  -moz-column-rule: 2px solid lightblue; 
+  column-rule: 2px solid lightblue;
+  transform: translateZ(0)
+}
+
+#media p {
+  text-indent: 5em;
+  font-size: 0.9em;
+}
+
+#media i {
+  color: #98afc7;
+}
+
+footer {
+  background: url("../media/footer.png") no-repeat center top;
+  padding: 3em;
+  text-align: center;
+  div {
+    background: none;
+    display: block;
+    i {
+      padding:0 10px 10px 10px;
+    }
+  }
+}
+
+

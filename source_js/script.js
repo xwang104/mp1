@@ -80,6 +80,7 @@ function scrollDown() {
   $("#navigation").css({'height': '3.8em',
                         'margin-top': '0',
                         'position': 'fixed'});
+  $("#carousel-container").css('padding-top', '170px');
 }
 
 function scrollUp() {
@@ -88,6 +89,7 @@ function scrollUp() {
   $("#navigation").css({'height': '3em',
                         'margin-top': '5.8em',
                         'position': 'absolute'});
+  $("#carousel-container").css('padding-top', '0px');
 }
 
 
@@ -98,19 +100,19 @@ $(document).ready(function() {
     var activeWindow;
     $(".chadiv").click(function() {
         var id = $(this).attr('id');
-    activeWindow = $("#" + id + "-detail")
+        activeWindow = $("#" + id + "-detail")
             .css('opacity', '0')
             .css('top', '50%')
             .css('left', '50%')
             .fadeTo(500, 1);
-    $("#modal")
-        .append('<div id="blind" />')
-        .find("#blind")
-        .css('opacity', '0')
-        .fadeTo(500, 0.6)
-        .click(function() {
-            closeModal();
-        });
+        $("#modal")
+            .append('<div id="blind" />')
+            .find("#blind")
+            .css('opacity', '0')
+            .fadeTo(500, 0.6)
+            .click(function() {
+                closeModal();
+            });
     });
 
     $("a.close").click(function(e) {
@@ -122,5 +124,25 @@ $(document).ready(function() {
         activeWindow.fadeOut(250, function(){ $(this).css('top', '-1000px').css('left','-1000px');});
         $("#blind").fadeOut(250, function() { $(this).remove();});
     }
+});
+
+//--------Smooth Scrolling-------------
+
+$(".changeBackground a").click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    if (id == "part1") {
+        $('html, body').animate({
+            scrollTop: $("#carousel-container").offset().top - 50}, 1000);
+    }
+    if (id == "part2") {
+        $('html, body').animate({
+            scrollTop: $("#characters").offset().top - 50}, 1000);
+    }
+    if (id == "part3") {
+        $('html, body').animate({
+            scrollTop: $("video").offset().top-50}, 1000);
+    }
+
 });
 
