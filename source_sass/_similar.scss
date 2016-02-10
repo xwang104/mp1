@@ -1,0 +1,36 @@
+div#similar {
+  padding: 2em;
+  text-align: center;
+  h3 {
+    font-size: 1.8em;
+    font-family: $font-primary;
+    color: pink;
+    padding: 1em;
+  }
+}
+
+.similardiv {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  width: 37%;
+  margin: 2%;
+  padding: 2%;
+  height: 12em;
+}
+
+div#similar img {
+  width: 30%;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+div#similar p {
+  margin-left: 37%;
+  font-size: 1em;
+  span {
+    font-weight: 900;
+  }
+}

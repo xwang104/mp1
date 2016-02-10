@@ -147,3 +147,28 @@ footer {
 .active {
   background-color: pink;
 }
+
+#page-top {
+  text-align:center;
+  vertical-align: middle;
+  div {
+    position: relative;
+    img {
+      cursor: pointer;
+    }
+ }
+}
+
+.ptop-float {
+  animation-name: ptop-float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes ptop-float {
+  0% {transform:translate(0, 0);}
+  50% {transform:translate(0, -10px);}
+  100% {transform:translate(0, 0);}
+}
+
