@@ -49,7 +49,7 @@ function slide(dir) {
     if (dir != -1) {
         dir = 1;
     }
-    slider_entries.animate({"left": "+=" + (-800 * dir)}, 250, function() {
+    slider_entries.animate({"left": "+=" + (-800 * dir)}, 400, function() {
         //alert("slide" + current + ", "  + dir + ", " + len);
         current += dir;
         var cycle = !!(current === 0 || current > len);
@@ -66,7 +66,7 @@ $(document).scroll(function() {
     if($(window).scrollTop() > 80) {
         scrollDown();
     }
-    if($(window).scrollTop() > 120) {
+    if($(window).scrollTop() > 110) {
         $("#navigation").css('height', '3em');
     }
     if($(window).scrollTop() <= 80) {
@@ -131,18 +131,42 @@ $(document).ready(function() {
 $(".changeBackground a").click(function(e) {
     e.preventDefault();
     var id = $(this).attr('href');
-    if (id == "part1") {
-        $('html, body').animate({
-            scrollTop: $("#carousel-container").offset().top - 50}, 1000);
-    }
-    if (id == "part2") {
-        $('html, body').animate({
-            scrollTop: $("#characters").offset().top - 50}, 1000);
-    }
-    if (id == "part3") {
-        $('html, body').animate({
-            scrollTop: $("video").offset().top-50}, 1000);
-    }
+    $('html, body').animate({
+        scrollTop: $("#" + id).offset().top}, 1000);  
 
 });
+
+//---------position indicator-----------
+
+var sections = {},
+    section_heights = [],
+    _height = $(window).height(),
+    i = 0,
+    j = 0;
+
+$(document).scroll(function() {
+    $("section").each(function() {
+        sections[$(this).attr("id")] = $(this).offset().top;
+    });
+    for (i = 1; i < Object.keys(sections).length; i++) {
+        j = i + 1;
+        section_heights[i] = sections["part" + j] - sections["part" + i];
+    }
+    section_heights[i] = $("footer").offset().top - sections["part" + i];
+    var $this = $(this),
+        pos = $this.scrollTop();
+    //alert("height" + sections["part1"] +";" + sections["part2"] +";" + sections["part3"]);
+    $("nav ul li").removeClass('active');
+    j = 1
+    for (i in sections) {
+            //console.log("inactive " + i + ":" + sections[i] + "," + pos + ", " + _height);
+        if (sections[i] > pos - section_heights[j] + 50 && sections[i] < pos + 50) {
+            $("nav ul li").removeClass('active');
+            $("#nav-" + i).addClass('active');
+            //console.log("active -- "  + i + ":" + sections[i] + "," + pos + ", " + _height);
+        } 
+        j++;
+    }
+});
+
 

@@ -47,6 +47,7 @@ nav {
   background-color:lightBlue ;
   width: 100%;
   height: 3em;
+  transition: height 0.5s ease-out;
   position: absolute;
   margin-top: 5.8em;
   z-index: -1;
@@ -119,18 +120,6 @@ div#invisible-header img {
   padding: 2em 3em 2em 3em;
   border: 2px solid;
   border-color: lightBlue lighten($orange, 50);
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-
-  -webkit-column-gap: 40px; 
-  -moz-column-gap: 40px; 
-  column-gap: 40px;
-
-  -webkit-column-rule: 2px solid lightblue; 
-  -moz-column-rule: 2px solid lightblue; 
-  column-rule: 2px solid lightblue;
-  transform: translateZ(0)
 }
 
 #media p {
@@ -155,4 +144,6 @@ footer {
   }
 }
 
-
+.active {
+  background-color: pink;
+}
